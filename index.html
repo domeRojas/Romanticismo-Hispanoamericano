@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanticismo Hispanoamericano - Viaje Literario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Página de Entrada Mejorada -->
+    <div class="entrada-page" id="entradaPage">
+        <div class="floating-element">🪶</div>
+        <div class="floating-element">📖</div>
+        <div class="floating-element">✒️</div>
+        <div class="floating-element">📜</div>
+        <div class="floating-element">🎭</div>
+        <div class="floating-element">💘</div>
+        
+        <div class="entrada-content">
+            <h1 class="entrada-title">🌟 Romanticismo Hispanoamericano 🌟</h1>
+            <p class="entrada-subtitle">Un viaje literario por la pasión, la libertad y la identidad americana</p>
+            <button class="btn-entrar" onclick="iniciarExperiencia()">✨ Iniciar Experiencia ✨</button>
+        </div>
+    </div>
+
+    <!-- Página Principal -->
+    <div class="main-page" id="mainPage">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Romanticismo<br>Hispanoamericano</h2>
+            </div>
+            <div class="menu-item active" onclick="mostrarSeccion('inicio')">
+                <span class="menu-icon"></span>
+                <span>Inicio</span>
+            </div>
+            <div class="menu-item" onclick="mostrarSeccion('contexto')">
+                <span class="menu-icon"></span>
+                <span>Contexto Histórico</span>
+            </div>
+            <div class="menu-item" onclick="mostrarSeccion('caracteristicas')">
+                <span class="menu-icon"></span>
+                <span>Características</span>
+            </div>
+            <div class="menu-item" onclick="mostrarSeccion('estructura')">
+                <span class="menu-icon"></span>
+                <span>Estructura</span>
+            </div>
+            <div class="menu-item" onclick="mostrarSeccion('autores')">
+                <span class="menu-icon"></span>
+                <span>Autores</span>
+            </div>
+            <div class="menu-item" onclick="mostrarSeccion('juegos')">
+                <span class="menu-icon"></span>
+                <span>Juegos</span>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="main-content">
+            <div class="header-top">
+                <h1>Romanticismo Hispanoamericano</h1>
+                <p>1830 - 1880 | La época dorada de la literatura latinoamericana</p>
+            </div>
+
+            <!-- Sección Inicio -->
+            <div id="inicio" class="content-section active">
+                <h2>🌟 Bienvenido al Romanticismo Hispanoamericano</h2>
+                <p style="font-size: 1.2rem; text-align: center; color: #FF0066; margin: 2rem 0;">
+                    Explora uno de los movimientos literarios más apasionantes de América Latina. 
+                    Descubre las historias de amor imposible, las luchas por la libertad y la búsqueda 
+                    de identidad que marcaron una época.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="info-box" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📖</div>
+                        <h3 style="color: #FF0066; margin: 0;">7 Autores</h3>
+                        <p>Representantes destacados del movimiento</p>
+                    </div>
+                    <div class="info-box" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎭</div>
+                        <h3 style="color: #FF0066; margin: 0;">50 Años</h3>
+                        <p>De influencia en la literatura latinoamericana</p>
+                    </div>
+                    <div class="info-box" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💘</div>
+                        <h3 style="color: #FF0066; margin: 0;">Pasión</h3>
+                        <p>Emoción y libertad en cada obra</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Características -->
+            <div id="caracteristicas" class="content-section">
+                <h2> Características del Romanticismo Hispanoamericano</h2>
+
+                <div class="caracteristica-grid">
+                    <div class="caracteristica-card">
+                        <strong>💘 Pasión Desenfrenada</strong>
+                        Emociones intensas, amor imposible y sentimientos exaltados como centro de la narrativa.
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <strong>🗽 Búsqueda de Identidad</strong>
+                        Definición de la identidad nacional y americana, diferenciación de Europa.
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <strong>⚔️ Espíritu Combativo</strong>
+                        Lucha contra la opresión, dictaduras y injusticia social a través de la literatura.
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <strong>🌿 Naturaleza como Personaje</strong>
+                        La naturaleza americana exuberante como protagonista, escenario y espejo de emociones.
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <strong>📖 Prosa Melodramática</strong>
+                        Narrativa fluida, descriptiva y altamente emotiva, frecuentemente en primera persona.
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <strong>🎭 Personajes Arquetípicos</strong>
+                        Héroes nobles, villanos despreciables, mujeres virtuosas y patrias personificadas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Estructura -->
+            <div id="estructura" class="content-section">
+                <h2>Estructura de las Obras Románticas</h2>
+                <div class="info-box">
+                    <strong style="color: #FF0066;">Narrador omnisciente: :</strong>Predomina un narrador en tercera persona que conoce los pensamientos de los personajes, pero que además opina, juzga y se dirige directamente al lector.
+                </div>
+                <div class="info-box">
+                    <strong style="color: #FF0066;">Episodios intercalados:</strong> Es común encontrar historias secundarias, leyendas populares, poemas o canciones insertadas en el relato principal. 
+                </div>
+                <div class="info-box">
+                    <strong style="color: #FF0066;">Descripciones extensas:</strong> El paisaje, las costumbres, los tipos sociales reciben descripciones detalladas que a veces detienen la acción. Estas descripciones tienen función tanto estética como documental.
+                </div>
+
+                <div class="info-box">
+                    <strong style="color: #FF0066;">Desenlace Frecuentemente Trágico:</strong> Muchas narraciones románticas terminan con la muerte de los protagonistas o con reflexiones sobre el destino de la nación. 
+                </div>
+
+            </div>
+            
+
+          <!-- Sección Autores -->
+<div id="autores" class="content-section">
+    <h2>Principales Representantes</h2>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/jose-marmol.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>José Mármol (Argentina, 1817-1871)</h3>
+            <p><strong>Vida:</strong> Se opuso fervientemente a la dictadura de Rosas, escribió poemas en las paredes de su celda. Se exilió en Montevideo y Chile.</p>
+            <p><strong>Estilo:</strong> Prosa descriptiva, melodramática y combativa. Personajes esquemáticos: héroes nobles vs villanos despreciables.</p>
+            <p><strong>Obra:</strong> <em>Amalia</em> (1851-1855) - Primera novela argentina. Historia de amor durante el terror rosista.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+                "Buenos Aires, teatro sangriento donde se representa hace tantos años el horrible drama de la tiranía sudamericana, presentaba en aquella época el aspecto más singular y característico. La ciudad estaba dividida en dos grandes fracciones: los federales y los unitarios. Los primeros mandaban, los segundos padecían. Entre unos y otros no había transición posible: eran dos razas enemigas que se aborrecían a muerte. El puñal, la cárcel, el destierro, el asesinato político eran los únicos medios de que se servía el poder para dominar a sus adversarios.""
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/jorge-isaacs.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>Jorge Isaacs (Colombia, 1837-1895)</h3>
+            <p><strong>Vida:</strong> Nació en Cali en familia acomodada. Participó en guerras civiles. La ruina familiar marcó su vida.</p>
+            <p><strong>Estilo:</strong> Delicadeza lírica y sensibilidad poética. Prosa musical y evocativa. Descripciones exuberantes del paisaje vallecaucano.</p>
+            <p><strong>Obra:</strong> <em>María</em> (1867) - Obra cumbre del Romanticismo hispanoamericano. Amor imposible entre Efraín y su prima María.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+                "Era yo niño aún cuando me alejaron de la casa paterna para que diera principio a mis estudios en el colegio del doctor Lorenzo María Lleras, establecido en Bogotá hacía pocos años, y famoso en toda la República por aquel tiempo. En la noche víspera de mi viaje, después de la velada, entró a mi cuarto una de mis hermanas, y sin decirme una sola palabra cariñosa, porque los sollozos le embargaban la voz, cortó de mi cabeza unos cabellos: cuando salió, habían rodado por mi cuello algunas lágrimas suyas. Me dormí llorando y experimenté como un vago presentimiento de muchos pesares que debía sufrir después."
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/esteban_echeverria.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>Esteban Echeverría (Argentina, 1805-1851)</h3>
+            <p><strong>Vida:</strong> Viajó a París y absorbió ideas románticas. Fundó la Asociación de Mayo. Se exilió en Uruguay huyendo de Rosas.</p>
+            <p><strong>Estilo:</strong> Vigor dramático y tensión narrativa. Prosa directa. Realismo crudo para denunciar violencia política.</p>
+            <p><strong>Obra:</strong> <em>El matadero</em> (1838) - Primer cuento argentino. Alegoría brutal de la dictadura rosista.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+               "El matadero de la Convalecencia o del Alto, sito en las quintas al sud de la ciudad, es una gran playa en forma rectangular, colocada al extremo de dos calles, una de las cuales allí termina y la otra se prolonga hasta el este. Esta playa, con declive al sud, está cortada por un zanjón labrado por la corriente de las aguas pluviales, en cuyos bordes laterales se muestran innumerables cuevas de ratones y cuyo cauce recoge en tiempo de lluvia toda la sangraza seca o reciente del matadero. A la izquierda se levanta una casilla de tres piezas con corredor al frente que da a la calle y palenque para atar caballos."
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/sarmiento_domingo.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>Domingo Faustino Sarmiento (Argentina, 1811-1888)</h3>
+            <p><strong>Vida:</strong> Autodidacta prodigioso. Maestro, gobernador, senador y presidente de Argentina (1868-1874). Impulsó educación pública.</p>
+            <p><strong>Estilo:</strong> Mezcla ensayo, biografía y panfleto político. Prosa vigorosa abundante en metáforas. Crea tipos sociales memorables.</p>
+            <p><strong>Obra:</strong> <em>Facundo</em> (1845) - Biografía del caudillo Facundo Quiroga y ensayo sobre civilización vs barbarie.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+                "¡Sombra terrible de Facundo, voy a evocarte, para que, sacudiendo el ensangrentado polvo que cubre tus cenizas, te levantes a explicarnos la vida secreta y las convulsiones internas que desgarran las entrañas de un noble pueblo! Tú posees el secreto: ¡revélanoslo! Diez años aún después de tu trágica muerte, el hombre de las ciudades y el gaucho de los llanos argentinos, al tomar diversos senderos en el desierto, decían: '¡No! ¡No ha muerto! ¡Vive aún! Él vendrá.' ¡Cierto! Facundo no ha muerto; está vivo en las tradiciones populares, en la política y revoluciones argentinas; en Rosas, su heredero, su complemento."
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/gertrudis.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>Gertrudis Gómez de Avellaneda (Cuba-España, 1814-1873)</h3>
+            <p><strong>Vida:</strong> Nació en Cuba, se trasladó a España. Poeta, novelista y dramaturga. Una de las primeras escritoras profesionales.</p>
+            <p><strong>Estilo:</strong> Pasión contenida y elegancia formal. Prosa fluida y musical. Personajes femeninos complejos.</p>
+            <p><strong>Obra:</strong> <em>Sab</em> (1841) - Primera novela antiesclavista hispanoamericana. Denuncia la esclavitud y opresión de la mujer.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+               "¡Oh, las mujeres! ¡Pobres y ciegas víctimas! Como los esclavos, ellas arrastran pacientemente su cadena y bajan la cabeza bajo el yugo de las leyes humanas. Sin otra guía que su corazón ignorante y crédulo, eligen un dueño para toda la vida. El esclavo, al menos, puede cambiar de amo, puede esperar que, juntando oro, comprará algún día su libertad; pero la mujer, cuando levanta sus manos enflaquecidas y su frente ultrajada, para pedir libertad, oye al monstruo de voz sepulcral que le grita: 'En la tumba.'"
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/hernandez.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>José Hernández (Argentina, 1834-1886)</h3>
+            <p><strong>Vida:</strong> Vivió en el campo, conociendo profundamente la vida gaucha. Defendió al gaucho contra abusos de autoridades.</p>
+            <p><strong>Estilo:</strong> Reproduce fielmente el habla gaucha. Narración directa en primera persona. Aventuras con reflexiones filosóficas populares.</p>
+            <p><strong>Obra:</strong> <em>Martín Fierro</em> (1872-1879) - Poema narrativo considerado el poema nacional argentino.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+                "Aquí me pongo a cantar al compás de la vigüela, que el hombre que lo desvela una pena extraordinaria, como la ave solitaria con el cantar se consuela."
+            </div>
+        </div>
+    </div>
+
+    <div class="autor-card">
+        <div class="autor-image-placeholder" onclick="toggleAutorInfo(this)">
+            <img src="image/altamirano_ignacio.jpg" alt="">
+        </div>
+        <div class="autor-info">
+            <h3>Ignacio Manuel Altamirano (México, 1834-1893)</h3>
+            <p><strong>Vida:</strong> Indígena nahua de familia humilde. Su lengua materna fue el náhuatl. Llegó a ser abogado, periodista y educador.</p>
+            <p><strong>Estilo:</strong> Claridad y propósito pedagógico. Prosa accesible. Descripciones coloridas del paisaje mexicano. Costumbrismo.</p>
+            <p><strong>Obra:</strong> <em>El Zarco</em> (1888-1889) - Contrasta trabajo honesto con bandolerismo. Fresco de vida rural mexicana.</p>
+            <div class="fragmento">
+                <strong>Fragmento de su obra:</strong><br>
+                "Yautepec es un pueblo pequeño, pero de bella apariencia, situado en un valle fertilísimo de tierra caliente. Sus casas, blanqueadas con cal y cubiertas de teja roja, se destacan alegremente entre el verde oscuro de los naranjos y de otros árboles frutales que abundan en las huertas. El clima es delicioso; la vegetación exuberante; las flores brotan espontáneas por todas partes. Parece que la naturaleza ha querido hacer de aquel lugar un edén. Mas en la época de que hablamos, aquel paraíso estaba infestado de bandidos."
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección Contexto Histórico -->
+<div id="contexto" class="content-section">
+    <h2>El Marco Histórico</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+        El Romanticismo hispanoamericano surge entre 1810-1880 en un contexto de independencia política y búsqueda de identidad cultural.
+    </p>
+
+    <div class="timeline-grid">
+        <div class="timeline-card">
+            <h4>1810-1825: Guerras de Independencia</h4>
+            <p>Se gestan los movimientos independentistas. Los escritores participan como combatientes, periodistas y pensadores.</p>
+        </div>
+        <div class="timeline-card">
+            <h4>1825-1850: Consolidación del Romanticismo</h4>
+            <p>Emerge una generación de escritores que busca definir la identidad americana. Aparecen las primeras novelas y obras significativas.</p>
+        </div>
+        <div class="timeline-card">
+            <h4>1850-1880: Apogeo y Evolución</h4>
+            <p>El movimiento alcanza su máxima expresión con obras maestras. Se integran elementos costumbristas y realistas.</p>
+        </div>
+    </div>
+       <div class="context-images">
+        <img src="image/romantico2.jpg" alt="Manuscritos románticos hispanoamericanos" class="context-image">
+        <img src="image/img1.jpg" alt="Período de independencia en América Latina" class="context-image">
+    </div>
+</div>
+
+
+
+<!-- Sección Juegos -->
+<div id="juegos" class="content-section">
+    <h2>Actividad Interactiva</h2>
+
+    <!-- Quiz -->
+    <div class="quiz-container">
+        <h3 style="color: #FF0066; margin-bottom: 1.5rem;">Quiz: ¿Cuánto sabes del Romanticismo?</h3>
+        <div id="quiz"></div>
+        <button class="btn-verificar" onclick="verificarQuiz()">Verificar Respuestas</button>
+        <div id="score" class="score"></div>
+    </div>
+    <button class="btn-verificar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

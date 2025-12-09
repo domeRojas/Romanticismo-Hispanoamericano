@@ -1,0 +1,815 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffff99 0%, #ffcc99 25%, #ff9999 50%, #ccff99 75%, #ff0066 100%);
+  overflow-x: hidden;
+}
+
+/* Página de Entrada */
+.entrada-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.entrada-content {
+  text-align: center;
+  z-index: 10;
+  animation: fadeIn 1.5s ease;
+}
+
+.entrada-title {
+  font-size: 4rem;
+  color: #ff0066;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  animation: slideDown 1s ease;
+}
+
+.entrada-subtitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 3rem;
+  animation: slideUp 1s ease 0.3s both;
+}
+
+.btn-entrar {
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #ff0066, #ffcc99);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 0, 102, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn-entrar:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 0, 102, 0.6);
+}
+
+/* Elementos flotantes decorativos */
+.floating-element {
+  position: absolute;
+  font-size: 3rem;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.floating-element:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.floating-element:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+.floating-element:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 2s;
+}
+.floating-element:nth-child(4) {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+.floating-element:nth-child(5) {
+  top: 50%;
+  left: 5%;
+  animation-delay: 4s;
+}
+.floating-element:nth-child(6) {
+  top: 60%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Página Principal */
+.main-page {
+  display: none;
+  min-height: 100vh;
+}
+
+.main-page.active {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #ffcc99 0%, #ff9999 100%);
+  padding: 2rem 1rem;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo h2 {
+  color: #ff0066;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item.active {
+  background: linear-gradient(135deg, #ff0066, #ffcc99);
+  color: white;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+}
+
+/* Contenido Principal */
+.main-content {
+  margin-left: 280px;
+  padding: 2rem;
+  flex: 1;
+}
+
+.header-top {
+  background: linear-gradient(135deg, #ff0066, #ffcc99);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.8s ease;
+}
+
+.content-section {
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.5s ease;
+}
+
+.content-section.active {
+  display: block;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h2 {
+  color: #ff0066;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid #ffcc99;
+  padding-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+h3 {
+  color: #ff0066;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Tarjetas de Características */
+.caracteristica-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.caracteristica-card {
+  background: linear-gradient(135deg, #ffff99 0%, #ffcc99 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 6px solid #ff0066;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.caracteristica-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.caracteristica-card:hover::before {
+  left: 100%;
+}
+
+.caracteristica-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255, 0, 102, 0.3);
+}
+
+.caracteristica-card strong {
+  color: #ff0066;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.caracteristica-card p {
+  text-align: left;
+  margin: 0;
+}
+
+/* Timeline Grid - same as caracteristica-grid for consistency */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.timeline-card {
+  background: linear-gradient(135deg, #ccff99, #ffff99);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 6px solid #ff0066;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.timeline-card:hover::before {
+  left: 100%;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 0, 102, 0.3);
+}
+
+.timeline-card h4 {
+  color: #ff0066;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.timeline-card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Added styles for historical context images */
+.context-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.context-image {
+  width: 400px;
+  height: 280px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border: 4px solid #ff0066;
+}
+
+.context-image:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 0, 102, 0.4);
+}
+
+/* Hide old timeline styles */
+.timeline {
+  display: none;
+  position: relative;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #ff0066, #ffcc99);
+  display: none;
+}
+
+.timeline-item {
+  display: none;
+  background: linear-gradient(135deg, #ccff99, #ffff99);
+  padding: 1.5rem;
+  margin: 0.8rem 0;
+  border-radius: 15px;
+  width: 45%;
+  position: relative;
+  animation: slideInLeft 0.8s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 55%;
+  animation: slideInRight 0.8s ease;
+}
+
+.timeline-item::before {
+  content: "📚";
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -60px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -60px;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Tarjetas de Autores */
+
+/* Added smooth transition and animation for author info visibility */
+.autor-info {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.autor-info.visible {
+  display: block;
+  opacity: 1;
+  max-height: 1000px;
+  animation: slideDown 0.5s ease;
+}
+
+.autor-card {
+  background: linear-gradient(135deg, #ffcc99, #ff9999);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.autor-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 0, 102, 0.3);
+}
+
+.autor-image-placeholder {
+  width: 200px;
+  height: 250px;
+  background: linear-gradient(135deg, #ccff99, #ffff99);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 4px solid #ff0066;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Added img styles to fit properly inside the placeholder */
+.autor-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11px;
+}
+
+.autor-image-placeholder:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 0, 102, 0.4);
+}
+
+.autor-info h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Updated author info paragraphs to use bullet points with checkmarks and left alignment */
+.autor-info p {
+  text-align: left;
+  margin: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.autor-info p::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff0066;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.autor-info strong {
+  color: #ff0066;
+  font-weight: 600;
+}
+
+.autor-additional-info {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #ff0066;
+}
+
+.autor-additional-info.visible {
+  display: block;
+  animation: slideDown 0.5s ease;
+}
+
+.fragmento {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 5px solid #ff0066;
+  border-radius: 10px;
+  font-style: italic;
+  color: #555;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Boxes */
+.info-box {
+  background: linear-gradient(135deg, #ccff99, #ffff99);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1.5rem auto;
+  border: 3px dashed #ff0066;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 800px;
+  text-align: center;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz */
+.quiz-container {
+  background: linear-gradient(135deg, #ffff99, #ffcc99);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  display: block;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: linear-gradient(135deg, #ccff99, #ffff99);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: linear-gradient(135deg, #ffcc99, #ff9999);
+  transform: translateX(10px);
+  border-color: #ff0066;
+}
+
+.option.correct {
+  background: #4caf50;
+  color: white;
+  border-color: #45a049;
+}
+
+.option.incorrect {
+  background: #f44336;
+  color: white;
+  border-color: #da190b;
+}
+
+.btn-verificar {
+  background: linear-gradient(135deg, #ff0066, #ffcc99);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 0, 102, 0.3);
+}
+
+.btn-verificar:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 0, 102, 0.5);
+}
+
+.score {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  color: #ff0066;
+  animation: bounceIn 0.8s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Juego de Memoria */
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.memory-card {
+  background: linear-gradient(135deg, #ff0066, #ffcc99);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+}
+
+.memory-card:hover {
+  transform: scale(1.05) rotateY(10deg);
+}
+
+.memory-card.flipped {
+  background: white;
+  color: #333;
+  border: 3px solid #ff0066;
+  transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  cursor: default;
+  animation: matchPulse 0.5s ease;
+}
+
+@keyframes matchPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .main-content {
+    margin-left: 220px;
+  }
+  /* The original timeline-item and timeline styles are now `display: none;`
+     but for completeness, if they were to be re-enabled,
+     their responsive adjustments would be here. */
+  .timeline-item {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline-item::before {
+    left: -40px !important;
+  }
+  .autor-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .autor-image-placeholder {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .entrada-title {
+    font-size: 2.5rem;
+  }
+  .entrada-subtitle {
+    font-size: 1.3rem;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .memory-game {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .caracteristica-grid {
+    grid-template-columns: 1fr;
+  }
+  .context-images {
+    flex-direction: column;
+  }
+
+  .context-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
